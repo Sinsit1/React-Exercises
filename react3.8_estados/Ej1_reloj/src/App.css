@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+}
+
+.clock-time {
+    margin:0 auto;
+    margin-top: 50px;
+    width: 250px;
+    font-size:90px;
+    font-family: mono;
+    background: #270003;
+    padding: 4px 7px 4px 12px;
+    color: #f00;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 1px -1px 0 0px #79797b, -1px 1px 0 0px #101010, -1px -1px 0 0px #101010, 1px 1px 0 0px #101010, inset 0 0 0 1px #000, inset 0 0 0 5px #121315;
+  }
+  

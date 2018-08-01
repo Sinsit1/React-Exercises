@@ -14,15 +14,15 @@ constructor () {
     updateClock(){ 
 
         if (this.state.seconds<59){
-        this.setState(
-            { 
-                seconds: this.state.seconds+1
-            }
-            )    
+            this.setState(
+                { 
+                    seconds: this.state.seconds+1
+                }
+                ) 
         }else {
             this.setState (
                 {
-                    seconds: 0,
+                    seconds: 0, //como pones dos cifras???
                     minutes: this.state.minutes+1
                 }
             )
@@ -38,7 +38,7 @@ constructor () {
     render() {
         
         return (
-            <p>{this.newDate()} </p>
+            <p className="clock-time">{this.newDate()} </p>
         )
     }
 }

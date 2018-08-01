@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import './sheepcounter.css';
+import './oveja.jpg';
 
+import Oveja from './Oveja';
 
-class SheepCounter extends React.Component {
+class SheepCounter extends Component {
     constructor (){
         super()
         this.state = {
-            counter:0
+            counter:0,
+            sheep: []
         }
     this.onClickListener= this.onClickListener.bind(this);
     }
@@ -13,17 +17,26 @@ class SheepCounter extends React.Component {
          this.setState({
             counter: this.state.counter+1
          })
+         this.createArraySheep();
+    }
 
+    createArraySheep (){
+        this.state.sheep.push (<Oveja />);
     }
     render() {
         return (
-            <div>
-                <button 
-                type="button" 
+            <div >
+                <a 
+                type="button" className='oveja'
                 onClick={this.onClickListener}
                 > ¡Toma oveja! 
-                </button>
-                <p>{this.state.counter}</p>
+                </a>
+                <p className="contador">{this.state.counter}</p>
+                {
+                    this.state.sheep.map( function(x) {
+                        return x;
+                })
+                }
             </div>
         );
       }
